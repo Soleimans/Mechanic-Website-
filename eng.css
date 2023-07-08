@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+}
+.navbar {
+    background-color: #B22222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.brand a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+.options, .dropdown {
+    display: flex;
+    gap: 50px;
+    position: relative;
+}
+.options a{
+    color: white;
+    text-decoration: none;
+}
+.selected-lang {
+    padding-left: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #B22222;
+    gap: 20px;
+    padding-left: 5px;
+    padding-right: 65px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+.selected-lang::before{
+    content: "";
+    display: inline-block;
+    height: 20px; /* Adjust as needed */
+    width: 30px; /* Adjust as needed */
+    background-image: url(https://flagpedia.net/data/flags/w580/us.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5px; /* Optional: adds some space between the flag and the text */
+    vertical-align: middle; /* Add this */
+}
+.dropdown-content .eng {
+    display: flex;
+    align-items: center;
+}
+.eng::before {
+    content: "";
+    display: inline-block;
+    height: 20px; /* Adjust as needed */
+    width: 30px; /* Adjust as needed */
+    background-image: url(https://flagpedia.net/data/flags/w580/lv.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5px; /* Optional: adds some space between the flag and the text */
+    vertical-align: middle; /* Add this */
+}
+.dropdown-content .ru {
+    display: flex;
+    align-items: center;
+}
+.ru::before {
+    content: "";
+    display: inline-block;
+    height: 20px; /* Adjust as needed */
+    width: 30px; /* Adjust as needed */
+    background-image: url(https://flagpedia.net/data/flags/w580/ru.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5px; /* Optional: adds some space between the flag and the text */
+    vertical-align: middle; /* Add this */
+}
+.hero{
+        background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),  /* This is your gradient overlay. Adjust the rgba values as needed */
+        url('https://images.unsplash.com/photo-1504222490345-c075b6008014?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') no-repeat center center fixed; 
+    background-size: cover;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.hero h1{
+    font-size: 100px;
+    color: white;
+}
+.description {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px ;
+    padding-right: 50px;
+    background-color: aliceblue;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.description-text {
+    width: 45%;
+}
+.description-text h2{
+    text-align: center;
+}
+.description-image {
+    width: 45%;
+}
+.description-image img {
+    width: 100%;
+}
+.services {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px ;
+    padding-right: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgba(240, 248, 255, 0.192);
+}
+.services-text {
+    width: 45%;
+}
+.services-text h2 {
+    text-align: center;
+}
+.services-image {
+    width: 45%;
+}
+.services-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+}
+ul {
+    list-style: none; /* Remove default bullets */
+}
+
+ul li {
+    position: relative; /* Create a positioning context for pseudo-elements */
+    padding-left: 20px; /* Make space for the custom bullet */
+}
+
+ul li::before {
+    content: ""; /* This is necessary for the pseudo-element to show */
+    position: absolute; /* Position the pseudo-element relative to the li */
+    left: 0; /* Position it at the left of the li */
+    top: 0; /* Align it with the top of the text */
+    height: 6px; /* Size of the bullet */
+    width: 6px; /* Size of the bullet */
+    border-radius: 50%; /* Make the bullet round */
+    background-color: red; /* Color of the bullet */
+}
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px ;
+    padding-right: 50px;
+    background-color: aliceblue;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.contacts-text {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contacts-text h2 {
+    text-align: center;
+}
+.contacts-form {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contacts-form h2{
+    text-align: center;
+}
+.contacts-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contacts-form input[type="text"],
+.contacts-form input[type="email"],
+.contacts-form input[type="phone"],
+.contacts-form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.contacts-form textarea {
+    resize: vertical; /* Allow vertical resizing for the textarea */
+}
+.bottom {
+    height: 30px;
+    background-color: #B22222;
+}
+.schedule {
+    padding-right: 70px;
+}
